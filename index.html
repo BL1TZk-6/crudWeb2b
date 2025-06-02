@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Gestión de Equipo Expo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
     <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
->
 </head>
 <body>
     <header class="container">
@@ -14,7 +13,7 @@
             <ul>
                 <li><b>Gestión Expo System</b></li>
             </ul>
-
+ 
             <ul>
                 <li><a href="#">Integrantes</a></li>
                 <li><a href="#">Tareas</a></li>
@@ -23,10 +22,10 @@
             </ul>
         </nav>
     </header>
-
+ 
     <main class="container">
         <h2>Integrantes del quipo</h2>
-
+ 
         <table id="tabla" class="overflow-auto">
             <thead>
                 <tr>
@@ -43,12 +42,28 @@
             </tbody>
         </table>
     </main>
-
+    <!--Modal para agregar registros-->
+    <dialog id="modalAgregar">
+        <article>
+            <header>
+                <a href="#" class="close" id="btnCerrarModal"></a>
+                <h3>Agregar Integrante</h3>
+            </header>
+            <form id="frmAgregarIntegrante">
+                <input type="text" id="nombre" placeholder="Nombre" required>
+                <input type="text" id="apellido" placeholder="Apellido" required>
+                <input type="email" id="email" placeholder="Correo electrónico" required>
+                <input type="number" placeholder="Edad" id="edad" required>
+                <button type="submit" class="contrast">Guardar</button>
+            </form>
+        </article>
+    </dialog>
+ 
     <!--Botón flotante para agregar registros-->
-    <button class="add-button" id="btnAbrirModal" title="Agregar Persona">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round-plus-icon lucide-user-round-plus"><path d="M2 21a8 8 0 0 1 13.292-6"/><circle cx="10" cy="8" r="5"/><path d="M19 16v6"/><path d="M22 19h-6"/></svg>
+    <button class="add-button" id="btnAbrirModal" title="Agregar Integrante">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2s.25" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-plus-icon lucide-circle-plus"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
     </button>
-
+ 
     <script src="JS/script.js"></script>
 </body>
 </html>
