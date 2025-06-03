@@ -18,3 +18,7 @@
 .add-button:hover{
     transform: scale(1.1); /*El botón crece 1.1 veces su tamaño*/
 }
+
+.tabla-scrool {
+    overflow-x: auto;
+}
